@@ -16,5 +16,6 @@ func main() {
 		log.Printf("Counter: %d", count)     //log the visitor count
 		fmt.Fprintf(w, "Counter: %d", count) //print the visitor count
 	})
-	http.ListenAndServe(":8080", nil) //serve the web application at localhost:8080
+	log.Print("Serving at localhost:8080") //log when server starts
+	http.ListenAndServe(":8080", nil)      //serve the web application at localhost:8080
 }
