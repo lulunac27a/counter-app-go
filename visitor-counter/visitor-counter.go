@@ -7,11 +7,14 @@ import (
 )
 
 func main() {
-	count := 0
+	count := 0 //initialize visitor count to 0
+	// Sends a request to "/" (the root page)
+	// w - HTTP response handler
+	// r - HTTP request
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		count++
-		log.Printf("Counter: %d", count)
-		fmt.Fprintf(w, "Counter: %d", count)
+		count++                              //increase count when request is made
+		log.Printf("Counter: %d", count)     //log the visitor count
+		fmt.Fprintf(w, "Counter: %d", count) //print the visitor count
 	})
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", nil) //serve the web application at localhost:8080
 }
