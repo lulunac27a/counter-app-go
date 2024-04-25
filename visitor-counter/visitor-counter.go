@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	count := 0 //initialize visitor count to 0
+	var count = 0 //initialize visitor count to 0
 	// Sends a request to "/" (the root page)
 	// w - HTTP response handler
 	// r - HTTP request
