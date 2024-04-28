@@ -1,4 +1,5 @@
 let counter = document.getElementById("count"); //key count since `Add # to counter` button is pressed
+let squareCounter = document.getElementById("squareCount"); //square count
 let counterValue = document.getElementById("counter"); //counter value
 let updateCount = document.getElementById("updateCount"); //
 let count = 0; //set key count to 0 when page is loaded
@@ -18,6 +19,7 @@ updateCount.addEventListener("click", async () => {
     }).then((response) => response.json());
     count = 0; //set key counter to 0
     counterValue.value = 0;
-    counter.textContent = request;
+    counter.textContent = request["count"];
+    squareCounter.textContent = request["squareCount"];
     updateCount.value = "Add 0 to counter";
 });
