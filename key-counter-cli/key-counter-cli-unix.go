@@ -35,6 +35,8 @@ func main() {
 		}
 		if text == '\r' { //when enter key is pressed
 			count += counter                                    //increase key count by number of keys pressed
+			squareCount += counter * counter                    //increase square count by count times count
+			triangleCount += counter * (counter + 1) / 2        //increase triangle count by triangular number of count
 			counter = 0                                         //set count to 0
 			log.Printf("\nCounter: %d", count)                  //log the key count
 			log.Printf("\nSquare Counter: %d", squareCount)     //log the square count
@@ -42,7 +44,7 @@ func main() {
 		} else if text == 27 { //when ESC key is pressed
 			break //stop the program
 		} else {
-			count++ //increase key count when key is pressed
+			counter++ //increase key count when key is pressed
 		}
 	}
 }
