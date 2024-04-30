@@ -43,7 +43,13 @@ func main() {
 			logger.Printf("Square Counter: %d\r", squareCount)     //log the square count
 			logger.Printf("Triangle Counter: %d\r", triangleCount) //log the triangle count
 		} else if text == 27 { //when ESC key is pressed
-			break //stop the program
+			count += counter                                             //increase key count by number of keys pressed
+			squareCount += counter * counter                             //increase square count by count times count
+			triangleCount += counter * (counter + 1) / 2                 //increase triangle count by triangular number of count
+			logger.Printf("Final Counter: %d\r", count)                  //log the final key count
+			logger.Printf("Final Square Counter: %d\r", squareCount)     //log the final square count
+			logger.Printf("Final Triangle Counter: %d\r", triangleCount) //log the final triangle count
+			break                                                        //stop the program
 		} else {
 			counter++ //increase key count when key is pressed
 		}
