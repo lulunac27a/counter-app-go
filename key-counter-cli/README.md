@@ -1,6 +1,6 @@
 # Key Counter Command Line Application in Go
 
-This app is a key counter using command line in Go. Currently it only supports UNIX (Macos and Linux).
+This app is a key counter using command line in Go. Currently, it only supports UNIX (macOS and Linux).
 
 ### Getting Started
 

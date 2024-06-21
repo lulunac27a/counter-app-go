@@ -3,7 +3,7 @@ let squareCounter = document.getElementById("squareCount"); //square count
 let triangleCounter = document.getElementById("triangleCount"); //triangle count
 let counterValue = document.getElementById("counter"); //counter value
 let updateCount = document.getElementById("updateCount"); //
-let count = 0; //set key count to 0 when page is loaded
+let count = 0; //set key count to 0 when the page is loaded
 
 document.addEventListener("keypress", () => {
     //increase key count when key is pressed

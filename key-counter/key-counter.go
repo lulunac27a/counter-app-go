@@ -22,7 +22,7 @@ func main() {
 			counter, err := strconv.Atoi(r.FormValue("counter")) //parse counter form variable to int
 			count += counter                                     //increase count by counter
 			squareCount += counter * counter                     //increase square count by counter times counter
-			triangleCount += counter * (counter + 1) / 2         //increase triangle count by triangular number of counter
+			triangleCount += counter * (counter + 1) / 2         //increase triangle count by triangular number of counters
 			log.Printf("Counter: %d", count)                     //log the total key count
 			log.Printf("Square Counter: %d", squareCount)        //log the square count
 			log.Printf("Triangle Counter: %d", triangleCount)    //log the triangle count

@@ -34,18 +34,18 @@ func main() {
 		if errors != nil {
 			panic(errors) //stop if there is an error due to failed to read rune input
 		}
-		if text == '\r' { //when enter key is pressed
+		if text == '\r' { //when an enter key is pressed
 			count += counter                                       //increase key count by number of keys pressed
 			squareCount += counter * counter                       //increase square count by count times count
-			triangleCount += counter * (counter + 1) / 2           //increase triangle count by triangular number of count
+			triangleCount += counter * (counter + 1) / 2           //increase triangle count by triangular number of counts
 			counter = 0                                            //set count to 0
 			logger.Printf("Counter: %d\r", count)                  //log the key count
 			logger.Printf("Square Counter: %d\r", squareCount)     //log the square count
 			logger.Printf("Triangle Counter: %d\r", triangleCount) //log the triangle count
-		} else if text == 27 { //when ESC key is pressed
+		} else if text == 27 { //when an ESC key is pressed
 			count += counter                                             //increase key count by number of keys pressed
 			squareCount += counter * counter                             //increase square count by count times count
-			triangleCount += counter * (counter + 1) / 2                 //increase triangle count by triangular number of count
+			triangleCount += counter * (counter + 1) / 2                 //increase triangle count by triangular number of counts
 			logger.Printf("Final Counter: %d\r", count)                  //log the final key count
 			logger.Printf("Final Square Counter: %d\r", squareCount)     //log the final square count
 			logger.Printf("Final Triangle Counter: %d\r", triangleCount) //log the final triangle count
