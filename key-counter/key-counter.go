@@ -35,7 +35,7 @@ func main() {
 			}
 		}
 	})
-	srv := &http.Server{
+	srv := &http.Server{ //initialize server with timeout
 		Addr:         ":8080",
 		Handler:      http.DefaultServeMux,
 		WriteTimeout: 15 * time.Second,
