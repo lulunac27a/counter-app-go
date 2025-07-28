@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"time"
 )
 
 func main() {
@@ -34,6 +35,12 @@ func main() {
 			}
 		}
 	})
+	srv := &http.Server{
+		Addr:         ":8080",
+		Handler:      http.DefaultServeMux,
+		WriteTimeout: 15 * time.Second,
+		ReadTimeout:  15 * time.Second,
+	}
 	log.Print("Serving at localhost:8080") //log when server starts
-	http.ListenAndServe(":8080", nil)      //serve the web application at localhost:8080
+	srv.ListenAndServe()                   //serve the web application at localhost:8080
 }
